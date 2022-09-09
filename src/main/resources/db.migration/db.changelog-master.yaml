@@ -1,0 +1,105 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/1_attributes.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 2
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/2_hero_class.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 3
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/3_galaxy.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 4
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/4_race.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 5
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/5_hero.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 6
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/6_user.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 7
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/7_guild.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 8
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/8_guild_member.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 9
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/9_request.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 10
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/10_conditions.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 11
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/11_reward.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 12
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/12_quest.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 13
+      author: Linuccia
+      changes:
+         - sqlFile:
+            path: changes/13_sequences.sql
+            dbms: 'postgresql'
+            relativeToChangelogFile: true
