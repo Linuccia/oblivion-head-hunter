@@ -14,7 +14,6 @@ public class RegisterHeroDto {
     private Integer level;
     private String raceName;
     private String className;
-    private String galaxyName;
     private String password;
 
 }

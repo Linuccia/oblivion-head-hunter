@@ -20,7 +20,7 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/3_galaxy.sql
+            path: changes/3_race.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true
   - changeSet:
@@ -28,7 +28,7 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/4_race.sql
+            path: changes/4_hero.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true
   - changeSet:
@@ -36,7 +36,7 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/5_hero.sql
+            path: changes/5_user.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true
   - changeSet:
@@ -44,7 +44,7 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/6_user.sql
+            path: changes/6_guild.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true
   - changeSet:
@@ -52,7 +52,7 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/7_guild.sql
+            path: changes/7_guild_member.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true
   - changeSet:
@@ -60,7 +60,7 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/8_guild_member.sql
+            path: changes/8_request.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true
   - changeSet:
@@ -68,7 +68,7 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/9_request.sql
+            path: changes/9_conditions.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true
   - changeSet:
@@ -76,7 +76,7 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/10_conditions.sql
+            path: changes/10_reward.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true
   - changeSet:
@@ -84,7 +84,7 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/11_reward.sql
+            path: changes/11_quest.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true
   - changeSet:
@@ -92,14 +92,6 @@ databaseChangeLog:
       author: Linuccia
       changes:
          - sqlFile:
-            path: changes/12_quest.sql
-            dbms: 'postgresql'
-            relativeToChangelogFile: true
-  - changeSet:
-      id: 13
-      author: Linuccia
-      changes:
-         - sqlFile:
-            path: changes/13_sequences.sql
+            path: changes/12_sequences.sql
             dbms: 'postgresql'
             relativeToChangelogFile: true

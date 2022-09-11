@@ -1,5 +1,5 @@
 package org.highload.oblivionheadhunter.exception;
 
-public class RaceNotFoundException {
+public class RaceNotFoundException extends RuntimeException{
 
 }

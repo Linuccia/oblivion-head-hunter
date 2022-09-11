@@ -15,7 +15,6 @@ public class HeroInfoDto {
     private Integer level;
     private String raceName;
     private String className;
-    private String galaxyName;
     private Attributes attributes;
 
 }
