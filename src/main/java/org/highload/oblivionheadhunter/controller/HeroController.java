@@ -1,7 +1,7 @@
 package org.highload.oblivionheadhunter.controller;
 
 import org.highload.oblivionheadhunter.model.dto.response.HeroInfoDto;
-import org.highload.oblivionheadhunter.model.entity.Hero;
+import org.highload.oblivionheadhunter.model.dto.response.QuestResponseDto;
 import org.highload.oblivionheadhunter.model.entity.Quest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +22,7 @@ public class HeroController {
     }
 
     @GetMapping("/quests")
-    ResponseEntity<List<Quest>> showHeroQuests(@RequestParam String heroName) {
+    ResponseEntity<List<QuestResponseDto>> showHeroQuests(@RequestParam String heroName) {
         return ResponseEntity.ok(new ArrayList<>());
     }
 

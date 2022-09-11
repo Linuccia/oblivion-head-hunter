@@ -1,8 +1,7 @@
 package org.highload.oblivionheadhunter.controller;
 
 import org.highload.oblivionheadhunter.model.dto.request.NewQuestDto;
-import org.highload.oblivionheadhunter.model.dto.response.AddedQuestDto;
-import org.highload.oblivionheadhunter.model.entity.Quest;
+import org.highload.oblivionheadhunter.model.dto.response.QuestResponseDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class QuestController {
 
     @GetMapping
-    ResponseEntity<Quest> showQuestInfo(@RequestParam String questName) {
-        return ResponseEntity.ok(new Quest());
+    ResponseEntity<QuestResponseDto> showQuestInfo(@RequestParam String questName) {
+        return ResponseEntity.ok(new QuestResponseDto());
     }
 
     @PostMapping
-    ResponseEntity<AddedQuestDto> addNewGuest(@RequestBody NewQuestDto newQuestDto) {
-        return ResponseEntity.ok(new AddedQuestDto());
+    ResponseEntity<QuestResponseDto> addNewQuest(@RequestBody NewQuestDto newQuestDto) {
+        return ResponseEntity.ok(new QuestResponseDto());
     }
 
     @PutMapping
