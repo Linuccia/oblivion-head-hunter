@@ -37,7 +37,6 @@ public class Hero {
     @NotNull
     private Integer level;
 
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "race_name")
     private Race race;
@@ -45,10 +44,6 @@ public class Hero {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "hero_class_name")
     private HeroClass heroClass;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "galaxy_name")
-    private Galaxy galaxy;
 
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "attributes_id")
