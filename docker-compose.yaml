@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  oblivionheadhunter_springapp:
+    build: .
+    image: 'oblivion-head-hunter-1.0.jar'
+    container_name: oblivionheadhunter_springapp
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/testdb
+    ports:
+      - 8000:8080
+    restart: on-failure
+    depends_on:
+      - oblivionheadhunter_db
+  oblivionheadhunter_db:
+    image: postgres:14
+    container_name: oblivionheadhunter_db
+    restart: on-failure
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=testdb
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+      - ./public.sql:/docker-entrypoint-initdb.d/create_tables.sql
+volumes:
+  pgdata:
