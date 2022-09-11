@@ -4,13 +4,20 @@ services:
     build: .
     image: 'oblivion-head-hunter-1.0.jar'
     container_name: oblivionheadhunter_springapp
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/testdb
-    ports:
-      - 8000:8080
     restart: on-failure
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://oblivionheadhunter_db:5432/oblivion
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=uhm562
+    ports:
+      - 8080:8080
     depends_on:
-      - oblivionheadhunter_db
+      oblivionheadhunter_db:
+        condition: service_healthy
+    networks:
+      - backendNetwork
+
+
   oblivionheadhunter_db:
     image: postgres:14
     container_name: oblivionheadhunter_db
@@ -19,11 +26,22 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=testdb
+      - POSTGRES_PASSWORD=uhm562
+      - POSTGRES_DB=oblivion
       - PGDATA=/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     volumes:
       - ./db-data:/var/lib/postgresql/data
       - ./public.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    networks:
+      - backendNetwork
+
 volumes:
   pgdata:
+
+networks:
+  backendNetwork:
